@@ -1,0 +1,46 @@
+[
+  {
+    "id": "proj1",
+    "title": "Modern Villa, Whitefield",
+    "description": "A contemporary G+2 villa with premium finishes, modular kitchen, and landscaped garden. Delivered on time within budget.",
+    "imageUrl": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+    "location": "Whitefield, Bengaluru",
+    "year": "2024",
+    "category": "Villa",
+    "createdAt": "2024-01-15T10:00:00.000Z",
+    "updatedAt": "2024-01-15T10:00:00.000Z"
+  },
+  {
+    "id": "proj2",
+    "title": "Classic Family Home, Koramangala",
+    "description": "Spacious G+1 residence with classic elevation, 4 BHK layout, and quality construction as per CLASSIC package.",
+    "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+    "location": "Koramangala, Bengaluru",
+    "year": "2023",
+    "category": "Residential",
+    "createdAt": "2024-01-15T10:00:00.000Z",
+    "updatedAt": "2024-01-15T10:00:00.000Z"
+  },
+  {
+    "id": "proj3",
+    "title": "Premium Duplex, JP Nagar",
+    "description": "Luxury duplex with premium flooring, designer bathrooms, and smart home features. IMPERIA package.",
+    "imageUrl": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
+    "location": "JP Nagar, Bengaluru",
+    "year": "2024",
+    "category": "Duplex",
+    "createdAt": "2024-01-15T10:00:00.000Z",
+    "updatedAt": "2024-01-15T10:00:00.000Z"
+  },
+  {
+    "id": "proj1770449711876",
+    "title": "HOME Peace HOME..",
+    "description": "Build and Hearty melting project with dezined Interiors and Exteriors..",
+    "imageUrl": "/uploads/project-1770453504209-59080865.jpg",
+    "location": "Mysore",
+    "year": "2025",
+    "category": "HOME",
+    "createdAt": "2026-02-07T07:35:11.876Z",
+    "updatedAt": "2026-02-07T08:38:24.232Z"
+  }
+]

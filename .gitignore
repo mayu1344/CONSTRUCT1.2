@@ -1,6 +1,6 @@
 node_modules/
 .env
-data/*.json
+data/leads.json
 uploads/*
 !uploads/.gitkeep
 package-lock.json

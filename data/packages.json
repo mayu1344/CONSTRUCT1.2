@@ -1,0 +1,32 @@
+{
+  "bengaluru": {
+    "basic": { "price": 1900, "label": "₹ 1900/sqft" },
+    "classic": { "price": 2030, "label": "₹ 2030/sqft" },
+    "premium": { "price": 2350, "label": "₹ 2350/sqft" }
+  },
+  "mumbai": {
+    "basic": { "price": 2100, "label": "₹ 2100/sqft" },
+    "classic": { "price": 2250, "label": "₹ 2250/sqft" },
+    "premium": { "price": 2600, "label": "₹ 2600/sqft" }
+  },
+  "delhi": {
+    "basic": { "price": 1950, "label": "₹ 1950/sqft" },
+    "classic": { "price": 2100, "label": "₹ 2100/sqft" },
+    "premium": { "price": 2450, "label": "₹ 2450/sqft" }
+  },
+  "hyderabad": {
+    "basic": { "price": 1850, "label": "₹ 1850/sqft" },
+    "classic": { "price": 1980, "label": "₹ 1980/sqft" },
+    "premium": { "price": 2280, "label": "₹ 2280/sqft" }
+  },
+  "pune": {
+    "basic": { "price": 1920, "label": "₹ 1920/sqft" },
+    "classic": { "price": 2050, "label": "₹ 2050/sqft" },
+    "premium": { "price": 2380, "label": "₹ 2380/sqft" }
+  },
+  "chennai": {
+    "basic": { "price": 1880, "label": "₹ 1880/sqft" },
+    "classic": { "price": 2000, "label": "₹ 2000/sqft" },
+    "premium": { "price": 2320, "label": "₹ 2320/sqft" }
+  }
+}
