@@ -26,7 +26,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#process">Our Process</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="#contact" class="btn-primary">Contact Us</a></li>
             </ul>
             <div class="hamburger">
@@ -220,8 +220,6 @@
         </div>
     </section>
 
-    </section>
-
     <!-- Guarantees Section -->
     <section class="section guarantees-section">
         <div class="container">
@@ -260,8 +258,6 @@
         </div>
     </section>
 
-    </section>
-
     <!-- Packages Section -->
     <section id="packages" class="section packages-section">
         <div class="container">
@@ -283,20 +279,126 @@
 
             <div class="packages-grid">
                 <!-- Basic Package -->
-                <div class="package-card reveal">
+                <div class="package-card reveal" data-package="basic">
                     <div class="package-header">
                         <h3>Basic</h3>
-                        <p class="price">₹ 1900/sqft <span class="tax">(Incl. GST)</span></p>
+                        <p class="price"><span class="price-value">₹ 1900/sqft</span> <span class="tax">(Incl.
+                                GST)</span></p>
                     </div>
                     <ul class="package-features">
-                        <li><span>Structure</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Kitchen</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Bathroom</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Doors & Windows</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Painting</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Flooring</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Electrical</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Miscellaneous</span> <i class="fas fa-plus"></i></li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Structure</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Steel: Fe 500/550 TMT bars</li>
+                                    <li>Cement: Portland cement (grade 53)</li>
+                                    <li>Aggregates: 20mm & 40mm</li>
+                                    <li>Blocks: Standard solid concrete blocks</li>
+                                    <li>RCC Design: As per structural drawing</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Kitchen</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Ceramic wall tiles: Up to 2ft above counter</li>
+                                    <li>Granite counter: Basic quality</li>
+                                    <li>Steel sink: Standard single bowl</li>
+                                    <li>Plumbing: Concealed copper pipes</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Bathroom</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Wall tiles: Ceramic up to 7ft height</li>
+                                    <li>Sanitaryware: Hindware/Parryware</li>
+                                    <li>Faucets: Chrome finish CP fittings</li>
+                                    <li>Floor: Anti-skid ceramic tiles</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Doors & Windows</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Main door: Teak wood frame with veneer</li>
+                                    <li>Internal doors: Sal wood frames</li>
+                                    <li>Windows: UPVC with glass</li>
+                                    <li>Hardware: Godrej/Dorset</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Painting</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Exterior: Apex/Asian weather-proof paint</li>
+                                    <li>Interior: Premium emulsion</li>
+                                    <li>Putty: 2 coats wall putty</li>
+                                    <li>Finish: Smooth matt finish</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Flooring</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Living/Dining: Ceramic tiles (2x2 ft)</li>
+                                    <li>Bedrooms: Ceramic tiles</li>
+                                    <li>Balconies: Anti-skid tiles</li>
+                                    <li>Parking: Cement finish</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Electrical</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Wiring: Finolex/Havells FR wires</li>
+                                    <li>Switches: Legrand/Anchor Roma</li>
+                                    <li>Outlets: Adequate points as per plan</li>
+                                    <li>DB: MCB & RCCB protection</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Miscellaneous</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Staircase: Granite steps with railing</li>
+                                    <li>Overhead tank: Sintex 1000L</li>
+                                    <li>Sump: 5000L capacity</li>
+                                    <li>Railing: MS railing painted</li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                     <div class="package-footer">
                         <a href="#contact" class="btn-primary btn-block">Talk To Our Expert</a>
@@ -304,20 +406,134 @@
                 </div>
 
                 <!-- Classic Package -->
-                <div class="package-card featured reveal">
+                <div class="package-card featured reveal" data-package="classic">
                     <div class="package-header">
                         <h3>Classic</h3>
-                        <p class="price">₹ 2030/sqft <span class="tax">(Incl. GST)</span></p>
+                        <p class="price"><span class="price-value">₹ 2030/sqft</span> <span class="tax">(Incl.
+                                GST)</span></p>
                     </div>
                     <ul class="package-features">
-                        <li><span>Structure</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Kitchen</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Bathroom</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Doors & Windows</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Painting</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Flooring</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Electrical</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Miscellaneous</span> <i class="fas fa-plus"></i></li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Structure</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Steel: Fe 500/550 TMT bars (Premium grade)</li>
+                                    <li>Cement: UltraTech/ACC Portland cement (grade 53)</li>
+                                    <li>Aggregates: 20mm & 40mm graded</li>
+                                    <li>Blocks: Solid concrete blocks 6" & 4"</li>
+                                    <li>RCC Design: M25 grade concrete</li>
+                                    <li>Waterproofing: Terrace & bathroom</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Kitchen</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Ceramic wall tiles: Full height premium tiles</li>
+                                    <li>Granite counter: Premium quality 20mm</li>
+                                    <li>Steel sink: Double bowl with drainer</li>
+                                    <li>Kitchen tap: Premium chrome finish</li>
+                                    <li>Dado: Designer tiles above counter</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Bathroom</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Wall tiles: Premium ceramic up to full height</li>
+                                    <li>Sanitaryware: Cera/Jaquar premium range</li>
+                                    <li>Faucets: Jaquar/Grohe CP fittings</li>
+                                    <li>Floor: Premium anti-skid tiles</li>
+                                    <li>Accessories: Towel rod, soap dish, etc.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Doors & Windows</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Main door: Premium teak wood frame with veneer shutter</li>
+                                    <li>Internal doors: Sal wood frames with flush doors</li>
+                                    <li>Windows: UPVC premium with 5mm clear glass</li>
+                                    <li>Hardware: Yale/Dorset premium locks</li>
+                                    <li>Grills: MS grills with enamel paint</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Painting</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Exterior: Asian/Dulux luxury weather-proof paint</li>
+                                    <li>Interior: Premium luxury emulsion</li>
+                                    <li>Putty: 3 coats premium wall putty</li>
+                                    <li>Finish: Premium smooth finish</li>
+                                    <li>Texture: One accent wall with texture</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Flooring</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Living/Dining: Premium vitrified tiles (2x2 ft)</li>
+                                    <li>Bedrooms: Premium vitrified tiles</li>
+                                    <li>Balconies: Anti-skid premium tiles</li>
+                                    <li>Parking: Interlocking paver blocks</li>
+                                    <li>Skirting: Matching tiles 4" height</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Electrical</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Wiring: Finolex/Polycab FR premium wires</li>
+                                    <li>Switches: Legrand Myrius/Schneider</li>
+                                    <li>Outlets: Ample points with modular plates</li>
+                                    <li>DB: Premium MCB & ELCB protection</li>
+                                    <li>Fans: Havells/Crompton premium (5 nos)</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Miscellaneous</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Staircase: Premium granite/marble steps with SS railing</li>
+                                    <li>Overhead tank: Sintex 1500L premium</li>
+                                    <li>Sump: 8000L capacity with cover</li>
+                                    <li>Railing: Stainless steel premium finish</li>
+                                    <li>Gate: Automated sliding gate</li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                     <div class="package-footer">
                         <a href="#contact" class="btn-primary btn-block">Talk To Our Expert</a>
@@ -325,20 +541,144 @@
                 </div>
 
                 <!-- Premium Package -->
-                <div class="package-card reveal">
+                <div class="package-card reveal" data-package="premium">
                     <div class="package-header">
                         <h3>Premium</h3>
-                        <p class="price">₹ 2350/sqft <span class="tax">(Incl. GST)</span></p>
+                        <p class="price"><span class="price-value">₹ 2350/sqft</span> <span class="tax">(Incl.
+                                GST)</span></p>
                     </div>
                     <ul class="package-features">
-                        <li><span>Structure</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Kitchen</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Bathroom</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Doors & Windows</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Painting</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Flooring</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Electrical</span> <i class="fas fa-plus"></i></li>
-                        <li><span>Miscellaneous</span> <i class="fas fa-plus"></i></li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Structure</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Steel: Fe 550 TMT bars (High grade)</li>
+                                    <li>Cement: UltraTech/Birla Super (grade 53)</li>
+                                    <li>Aggregates: 20mm & 40mm premium graded</li>
+                                    <li>Blocks: AAC/CLC lightweight blocks</li>
+                                    <li>RCC Design: M30 grade high strength concrete</li>
+                                    <li>Waterproofing: Premium terrace & wet areas</li>
+                                    <li>Insulation: Thermal insulation for roof</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Kitchen</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Wall tiles: Premium imported tiles full height</li>
+                                    <li>Granite counter: Imported granite 25mm</li>
+                                    <li>Steel sink: Premium double bowl Franke/Carysil</li>
+                                    <li>Kitchen tap: Grohe/Jaquar luxury range</li>
+                                    <li>Modular kitchen: Basic unit included</li>
+                                    <li>Chimney provision: Provision for chimney & hob</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Bathroom</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Wall tiles: Designer imported tiles full height</li>
+                                    <li>Sanitaryware: Kohler/Jaquar luxury collection</li>
+                                    <li>Faucets: Grohe/Hansgrohe imported fittings</li>
+                                    <li>Floor: Premium anti-skid designer tiles</li>
+                                    <li>Shower: Rain shower with diverter</li>
+                                    <li>Vanity: Premium vanity with mirror</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Doors & Windows</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Main door: Premium hardwood with designer veneer</li>
+                                    <li>Internal doors: Premium flush doors with veneer</li>
+                                    <li>Windows: UPVC/Aluminium premium with insulated glass</li>
+                                    <li>Hardware: Yale/Godrej premium digital locks</li>
+                                    <li>Grills: Designer MS/SS grills</li>
+                                    <li>Sliding doors: Premium aluminium sliding systems</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Painting</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Exterior: Asian/Dulux premium weather-shield paint</li>
+                                    <li>Interior: Royale/Dulux luxury emulsion</li>
+                                    <li>Putty: 3 coats premium JK/Birla putty</li>
+                                    <li>Finish: Premium smooth luxury finish</li>
+                                    <li>Texture: Designer texture on 2 accent walls</li>
+                                    <li>Special finishes: Stencil/wallpaper in one room</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Flooring</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Living/Dining: Italian marble/Premium vitrified (2x4 ft)</li>
+                                    <li>Bedrooms: Wooden flooring/Premium vitrified</li>
+                                    <li>Balconies: Premium anti-skid tiles</li>
+                                    <li>Parking: Premium paver blocks/epoxy coating</li>
+                                    <li>Skirting: Matching marble/tile 6" height</li>
+                                    <li>Master bedroom: Wooden laminate flooring option</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Electrical</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Wiring: Polycab/Havells premium FR wires</li>
+                                    <li>Switches: Schneider/Legrand luxury modular</li>
+                                    <li>Outlets: Premium points with USB charging ports</li>
+                                    <li>DB: Premium MCB-ELCB with surge protection</li>
+                                    <li>Fans: Premium BLDC fans (6 nos)</li>
+                                    <li>Lights: Designer LED lights included</li>
+                                    <li>Smart home: Provision for home automation</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="expandable-feature">
+                            <div class="feature-header">
+                                <span>Miscellaneous</span>
+                                <i class="fas fa-plus toggle-icon"></i>
+                            </div>
+                            <div class="feature-details">
+                                <ul>
+                                    <li>Staircase: Italian marble/Granite with SS designer railing</li>
+                                    <li>Overhead tank: Premium Sintex 2000L</li>
+                                    <li>Sump: 10000L capacity underground with motor</li>
+                                    <li>Railing: Premium SS 304 designer railing</li>
+                                    <li>Gate: Premium automated sliding/swing gate</li>
+                                    <li>Solar provision: Provision for solar water heater</li>
+                                    <li>Video door phone: Included</li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                     <div class="package-footer">
                         <a href="#contact" class="btn-primary btn-block">Talk To Our Expert</a>
@@ -346,8 +686,6 @@
                 </div>
             </div>
         </div>
-    </section>
-
     </section>
 
     <!-- Testimonials Section -->
@@ -475,6 +813,16 @@
                     <p><i class="fas fa-map-marker-alt"></i> 123 Construction Ave, City, State</p>
                 </div>
                 <div class="footer-col">
+                    <h4>Get a Quote</h4>
+                    <form id="contactForm" class="footer-contact-form">
+                        <input type="text" name="fullName" placeholder="Your Name*" required>
+                        <input type="tel" name="mobile" placeholder="Mobile*" required>
+                        <input type="text" name="location" placeholder="Plot Location*" required>
+                        <textarea name="message" placeholder="Message (optional)" rows="2"></textarea>
+                        <button type="submit" class="btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="footer-col">
                     <h4>Follow Us</h4>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -486,10 +834,10 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 SB INFRA PROJECTS. All Rights Reserved.</p>
+                <p style="margin-top:0.5rem; font-size:0.85rem;"><a href="admin.html"
+                        style="color:var(--primary-color);">Website owner: Admin</a></p>
             </div>
         </div>
-    </footer>
-
     </footer>
 
     <!-- Exit Intent Modal -->
@@ -500,18 +848,17 @@
                 <h2>Don't leave yet! Resolve your queries with our construction expert</h2>
                 <p>Trusted Builders for End-to-End Home Construction</p>
             </div>
-            <form class="modal-form">
+            <form id="expertModalForm" class="modal-form">
                 <div class="form-group">
-                    <input type="text" placeholder="Full Name*" required>
+                    <input type="text" name="fullName" id="modalFullName" placeholder="Full Name*" required>
                 </div>
                 <div class="form-group phone-group">
                     <span class="country-code">🇮🇳 +91</span>
-                    <input type="tel" placeholder="Mobile Number*" required>
+                    <input type="tel" name="mobile" id="modalMobile" placeholder="Mobile Number*" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" placeholder="Location of your plot*" required>
+                    <input type="text" name="location" id="modalLocation" placeholder="Location of your plot*" required>
                 </div>
-                <!-- Disclaimer similar to image -->
                 <p class="disclaimer">*By submitting, you agree to our Privacy Policy.</p>
                 <button type="submit" class="btn-primary btn-block">Start Your Construction</button>
             </form>
@@ -532,6 +879,12 @@
         </div>
     </div>
 
+    <!-- Toast container for success/error messages -->
+    <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="background-3d.js"></script>
     <script src="script.js"></script>
 </body>
 

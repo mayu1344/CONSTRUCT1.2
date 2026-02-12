@@ -1,0 +1,9 @@
+{
+  "name": "sb-infra-construct",
+  "version": "1.0.0",
+  "description": "SB Infra Projects - Construction consulting site with backend",
+  "scripts": {
+    "start": "cd server && npm install && node server.js",
+    "server": "cd server && node server.js"
+  }
+}

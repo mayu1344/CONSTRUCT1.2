@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - SB INFRA PROJECTS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="SB INFRA PROJECTS"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#process">Our Process</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="index.html#contact" class="btn-primary">Contact Us</a></li>
+            </ul>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <main class="page-content project-detail-page">
+        <div id="projectDetail" class="container project-detail">
+            <div class="project-detail-loading">Loading...</div>
+        </div>
+        <div id="projectNotFound" class="container" style="display:none; text-align:center; padding:4rem;">
+            <h2>Project not found</h2>
+            <a href="projects.html" class="btn-primary">Back to Projects</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p><a href="projects.html" style="color:var(--primary-color);">← All Projects</a> &nbsp;|&nbsp; <a href="index.html" style="color:var(--primary-color);">Home</a></p>
+                <p>&copy; 2024 SB INFRA PROJECTS. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const API = window.location.origin;
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        const wrap = document.getElementById('projectDetail');
+        const notFound = document.getElementById('projectNotFound');
+
+        document.querySelector('.hamburger')?.addEventListener('click', () => {
+            const nav = document.querySelector('.nav-links');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        if (!id) {
+            wrap.innerHTML = '';
+            wrap.style.display = 'none';
+            notFound.style.display = 'block';
+        } else {
+            fetch(API + '/api/projects/' + encodeURIComponent(id))
+                .then(r => r.json())
+                .then(data => {
+                    if (!data.success || !data.project) {
+                        wrap.style.display = 'none';
+                        notFound.style.display = 'block';
+                        return;
+                    }
+                    const p = data.project;
+                    wrap.innerHTML = `
+                        <a href="projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+                        <div class="project-detail-hero" style="background-image:url('${(p.imageUrl || '').replace(/'/g, "\\'")}')"></div>
+                        <div class="project-detail-body">
+                            <span class="project-detail-meta">${escapeHtml(p.location || '')} ${p.year ? ' · ' + p.year : ''} ${p.category ? ' · ' + escapeHtml(p.category) : ''}</span>
+                            <h1>${escapeHtml(p.title)}</h1>
+                            <p class="project-detail-desc">${escapeHtml(p.description || '')}</p>
+                            <a href="index.html#contact" class="btn-primary">Get a quote for your project</a>
+                        </div>
+                    `;
+                })
+                .catch(() => {
+                    wrap.style.display = 'none';
+                    notFound.style.display = 'block';
+                });
+        }
+
+        function escapeHtml(s) {
+            const d = document.createElement('div');
+            d.textContent = s;
+            return d.innerHTML;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - SB INFRA PROJECTS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="SB INFRA PROJECTS"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#process">Our Process</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="index.html#contact" class="btn-primary">Contact Us</a></li>
+            </ul>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <main class="page-content projects-page">
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Projects</h2>
+                    <p>Homes and buildings we've delivered for our clients.</p>
+                </div>
+                <div id="projectsGrid" class="projects-grid">
+                    <div class="projects-loading">Loading projects...</div>
+                </div>
+                <div id="projectsEmpty" class="projects-empty" style="display:none;">
+                    <p>No projects to show yet. Check back soon.</p>
+                    <a href="index.html#contact" class="btn-primary">Get in touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p><a href="index.html" style="color:var(--primary-color);">← Back to Home</a></p>
+                <p>&copy; 2024 SB INFRA PROJECTS. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const API = window.location.origin;
+        const grid = document.getElementById('projectsGrid');
+        const empty = document.getElementById('projectsEmpty');
+
+        document.querySelector('.hamburger')?.addEventListener('click', () => {
+            const nav = document.querySelector('.nav-links');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        fetch(API + '/api/projects')
+            .then(r => r.json())
+            .then(data => {
+                if (!data.success || !data.projects || data.projects.length === 0) {
+                    grid.innerHTML = '';
+                    grid.style.display = 'none';
+                    empty.style.display = 'block';
+                    return;
+                }
+                grid.classList.remove('projects-loading');
+                grid.innerHTML = data.projects.map(p => `
+                    <a href="project-detail.html?id=${encodeURIComponent(p.id)}" class="project-card">
+                        <div class="project-card-img" style="background-image:url('${(p.imageUrl || '').replace(/'/g, "\\'")}')"></div>
+                        <div class="project-card-body">
+                            <span class="project-card-meta">${escapeHtml(p.location || '')} ${p.year ? ' · ' + p.year : ''}</span>
+                            <h3>${escapeHtml(p.title)}</h3>
+                            <p>${escapeHtml((p.description || '').slice(0, 120))}${(p.description || '').length > 120 ? '…' : ''}</p>
+                            <span class="project-card-link">View project <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                `).join('');
+            })
+            .catch(() => {
+                grid.innerHTML = '<p class="projects-error">Unable to load projects. Please try again later.</p>';
+                empty.style.display = 'block';
+            });
+
+        function escapeHtml(s) {
+            const d = document.createElement('div');
+            d.textContent = s;
+            return d.innerHTML;
+        }
+    </script>
+</body>
+</html>
